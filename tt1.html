@@ -22,7 +22,18 @@
             margin-right: auto;
             overflow: hidden;
         }
-
+#playButton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+		}
         
 	</style>
     <!-- Libs and GDJS core files : -->
@@ -118,11 +129,17 @@
 
 </head>
 <body>
+<button id="playButton">play</button>
 
     
 	<script>
 
-    (function() {
+
+		const playButton = document.getElementById('playButton');
+
+playButton.addEventListener('click', function() {
+
+	(function() {
         //Initialization
         var game = new oobb.RuntimeGame(oobb.projectData, {});
 
@@ -137,6 +154,11 @@
             game.startGameLoop();
         });
     })();
+  playButton.style.display = "none";
+});
+
+		
+    
 
 	</script>
 </body>
