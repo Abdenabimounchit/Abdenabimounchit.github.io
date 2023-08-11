@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+            overflow: hidden;
+		}
+        #canvasArea {
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+#playButton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+		}
+        
+	</style>
+    <!-- Libs and GDJS core files : -->
+	<script src="https://abdenabimounchit.github.io/a1.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a2.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a3.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a4.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a5.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a6.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a7.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a8.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a9.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a10.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a11.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a12.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a13.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a14.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a15.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a16.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a17.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a18.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a19.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a20.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a21.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a22.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a23.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a24.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a25.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a26.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a27.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a28.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a29.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a30.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a31.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a32.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a33.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a34.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a35.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a36.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a37.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a38.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a39.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a40.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a41.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a42.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a43.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a44.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a45.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a46.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a47.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a48.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a49.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a50.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a51.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a52.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a53.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a54.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a55.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a56.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a57.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/a58.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo1.js?v=1" crossorigin="anonymous"></script>
+	<script>
+
+if (typeof oobb.evtsExt__Array__downloadurl !== "undefined") {
+ oobb.evtsExt__Array__downloadurl.registeredGdjsCallbacks.forEach(callback =>
+    oobb._unregisterCallback(callback)
+  );
+}
+
+oobb.evtsExt__Array__downloadurl = {};
+
+
+oobb.evtsExt__Array__downloadurl.userFunc0x161c7b8 = function(runtimeScene, eventsFunctionContext) {
+"use strict";
+const text = " \
+https://lh3.googleusercontent.com/u/0/drive-viewer/AITFw-zN4pQk-ax95yh8OInZYsI7z4NffeGUUbX6UZ2vTKNv0iBcyTxVJC54XKUT_QpIkKhD62luw6wO-ZK5hfVGbAme_qm11w=w0-s0 \
+https://lh3.googleusercontent.com/u/0/drive-viewer/AITFw-zOowyDr_7SEO6czMEN7tmkowY87QItsYf0dSi2sZO-r68J_HYlMubzqbWLiN65uP_YYUIH7egwj9XkWOZm_aoArpJ36w=w0-s0 \
+https://lh3.googleusercontent.com/u/0/drive-viewer/AITFw-xsk_92-x7DwbhqaJzym4vZdwUcDM6fFssoZMZ_Z19x8ES7LZPJaSW0lOZt4WoV77W8WlkJwRWVPoypGBPNVjb7ASlqjA=w0-s0 \
+https://lh3.googleusercontent.com/u/0/drive-viewer/AITFw-zgBW12jejzjYrSqnilZmMiKG2QXEU1GXaQluyiX6Pzn-AwrGI9C08iW5op2o2ol0ix_ptDHYdFawJkyS3fClis9rDm8Q=w0-s0 \
+"
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const pattern = /https:\/\/\S+/g;
+
+    const matches = text.match(pattern);
+
+    if (matches) 
+    {
+      for (let i = 0; i < matches.length; i++) 
+      {
+        runtimeScene.addUrlToMenu("URL", matches[i]); 
+      }
+    }
+   
+};
+oobb.evtsExt__Array__downloadurl.eventsList0 = function(runtimeScene, eventsFunctionContext) {
+
+{
+
+
+oobb.evtsExt__Array__downloadurl.userFunc0x161c7b8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+{
+}
+
+}
+
+
+};
+
+oobb.evtsExt__Array__downloadurl.func = function(runtimeScene, parentEventsFunctionContext) {
+var eventsFunctionContext = {
+  _objectsMap: {
+},
+  _objectArraysMap: {
+},
+  _behaviorNamesMap: {
+},
+  getObjects: function(objectName) {
+    return eventsFunctionContext._objectArraysMap[objectName] || [];
+  },
+  getObjectsLists: function(objectName) {
+    return eventsFunctionContext._objectsMap[objectName] || null;
+  },
+  getBehaviorName: function(behaviorName) {
+    return eventsFunctionContext._behaviorNamesMap[behaviorName] || behaviorName;
+  },
+  createObject: function(objectName) {
+    const objectsList = eventsFunctionContext._objectsMap[objectName];
+    if (objectsList) {
+      const object = parentEventsFunctionContext ?
+        parentEventsFunctionContext.createObject(objectsList.firstKey()) :
+        runtimeScene.createObject(objectsList.firstKey());
+      if (object) {
+        objectsList.get(objectsList.firstKey()).push(object);
+        eventsFunctionContext._objectArraysMap[objectName].push(object);
+      }
+      return object;    }
+    return null;
+  },
+  getInstancesCountOnScene: function(objectName) {
+    const objectsList = eventsFunctionContext._objectsMap[objectName];
+    let count = 0;
+    if (objectsList) {
+      for(const objectName in objectsList.items)
+        count += parentEventsFunctionContext ?
+parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
+        runtimeScene.getInstancesCountOnScene(objectName);
+    }
+    return count;
+  },
+  getLayer: function(layerName) {
+    return runtimeScene.getLayer(layerName);
+  },
+  getArgument: function(argName) {
+    return "";
+  },
+  getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
+};
+
+
+oobb.evtsExt__Array__downloadurl.eventsList0(runtimeScene, eventsFunctionContext);
+
+return;
+}
+
+oobb.evtsExt__Array__downloadurl.registeredGdjsCallbacks = [];
+
+
+
+    
+  </script>
+	<script src="https://abdenabimounchit.github.io/lo3.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo4.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo5.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo6.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo7.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo8.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo9.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo10.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo11.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo12.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo13.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo14.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo15.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo30.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo31.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo32.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/ls1.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo34.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo35.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo36.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo37.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo38.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo39.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo40.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/lo41.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/nc1.js?v=1" crossorigin="anonymous"></script>
+	<script src="https://abdenabimounchit.github.io/nc2.js?v=1" crossorigin="anonymous"></script>
+	
+
+
+</head>
+<body>
+<button id="playButton">play</button>
+
+    
+	<script>
+
+
+		const playButton = document.getElementById('playButton');
+
+playButton.addEventListener('click', function() {
+
+	(function() {
+        //Initialization
+        var game = new oobb.RuntimeGame(oobb.projectData, {});
+
+        //Create a renderer
+        game.getRenderer().createStandardCanvas(document.body);
+
+        //Bind keyboards/mouse/touch events
+        game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);
+
+        //Load all assets and start the game
+        game.loadAllAssets(function() {
+            game.startGameLoop();
+        });
+    })();
+  playButton.style.display = "none";
+});
+
+		
+    
+
+	</script>
+</body>
+    </html>
